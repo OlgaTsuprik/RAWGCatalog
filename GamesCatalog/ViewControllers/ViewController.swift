@@ -8,13 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    // MARK: IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: Properties
     var networkingManager = NetworkingManager()
-    
     var games: [GameDescription]?
     
+    // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -23,16 +24,13 @@ class ViewController: UIViewController {
             //guard data != nil else { return }
             self.games = data as? [GameDescription]
             print(self.games?.first?.descriprion)
-            print("!!!!!")
         }
-        
-        
     }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        games?.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

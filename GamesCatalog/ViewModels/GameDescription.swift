@@ -17,7 +17,6 @@ struct GamesList {
     init(game: Welcome) {
         gamesList = game.results.map {
             return GameDescription(descriprion: $0.reviewsTextCount)
-            
         }
     }
 }

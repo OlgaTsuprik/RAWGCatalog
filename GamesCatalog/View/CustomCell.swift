@@ -8,8 +8,8 @@
 import UIKit
 
 class GameCell: UITableViewCell {
+    // MARK: IBOutlets
+    
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var descriprionLabel: UILabel!
-    
 }
