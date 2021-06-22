@@ -27,7 +27,6 @@ class NetworkingManager {
                     if let games = GamesList(data: gamesData) {
                     completion(games)
                     }
-                    print(gamesData)
                 }
                 catch let error as NSError {
                     print(error)

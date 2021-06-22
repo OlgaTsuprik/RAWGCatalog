@@ -13,11 +13,6 @@ class ViewController: UIViewController {
     
     // MARK: Properties
     var networkingManager = NetworkingManager()
-//    var games: [GameDescription] = [] {
-//        didSet {
-//            self.tableView.reloadData()
-//        }
-//    }
     
     var games: [GameDescription] = []
     
@@ -35,7 +30,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         games.count
     }
@@ -48,5 +43,23 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         cell.selectionStyle = .none
         return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+       
+        let position = scrollView.contentOffset.y
+        if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height) {
+//        if position > (tableView.contentSize.height - 100 - scrollView.frame.size.height) {
+            networkingManager.fetchGames { [weak self] data in
+                self?.games.append(contentsOf: data.gamesList)
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                    
+                }
+            }
+            print("added")
+            print(games.count)
+        }
+        
     }
 }
