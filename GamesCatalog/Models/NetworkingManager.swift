@@ -23,7 +23,7 @@ class NetworkingManager {
             if let data = data {
                 let decoder = JSONDecoder()
                 do {
-                    let gamesData = try decoder.decode(Welcome.self, from: data)
+                    let gamesData = try decoder.decode(ListOfGames.self, from: data)
                     if let games = GamesList(data: gamesData) {
                     completion(games)
                     }

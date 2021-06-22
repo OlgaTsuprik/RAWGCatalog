@@ -8,49 +8,83 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--GAMES-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GamesCatalog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AFj-Km-dMb">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="wPV-hj-I9E">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vh-hX-UDB">
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="YNp-OO-i6p"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtJ-Ua-hMp">
+                                            <rect key="frame" x="70" y="8" width="336" height="44"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                    <constraints>
+                                        <constraint firstItem="qtJ-Ua-hMp" firstAttribute="leading" secondItem="8vh-hX-UDB" secondAttribute="trailing" id="D2u-5q-2vg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="qtJ-Ua-hMp" secondAttribute="bottom" id="FIu-ZG-m9r"/>
+                                        <constraint firstAttribute="bottom" secondItem="8vh-hX-UDB" secondAttribute="bottom" id="V4H-CL-LRm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="qtJ-Ua-hMp" secondAttribute="trailing" id="cTd-x1-wEM"/>
+                                        <constraint firstItem="8vh-hX-UDB" firstAttribute="top" secondItem="wPV-hj-I9E" secondAttribute="top" id="r83-pW-6Zs"/>
+                                        <constraint firstItem="8vh-hX-UDB" firstAttribute="leading" secondItem="wPV-hj-I9E" secondAttribute="leading" id="s7i-Th-qiH"/>
+                                        <constraint firstItem="qtJ-Ua-hMp" firstAttribute="top" secondItem="wPV-hj-I9E" secondAttribute="topMargin" id="t61-BA-ukM"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" id="e0R-hH-gmg" customClass="GameCell" customModule="GamesCatalog" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="48"/>
+                                        <rect key="frame" x="0.0" y="84.5" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e0R-hH-gmg" id="bMd-1r-KMQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iF5-OE-svw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="24"/>
+                                                    <rect key="frame" x="80" y="0.0" width="334" height="43"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95U-NO-dqP">
-                                                    <rect key="frame" x="20" y="16" width="374" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95U-NO-dqP">
+                                                    <rect key="frame" x="20" y="11" width="50" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="mLD-kw-oz4"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="95U-NO-dqP" firstAttribute="top" secondItem="bMd-1r-KMQ" secondAttribute="topMargin" constant="5" id="8kP-9O-pJZ"/>
-                                                <constraint firstItem="iF5-OE-svw" firstAttribute="top" secondItem="bMd-1r-KMQ" secondAttribute="top" id="QjS-Dh-uw1"/>
-                                                <constraint firstAttribute="trailing" secondItem="iF5-OE-svw" secondAttribute="trailing" id="SQN-Es-2I8"/>
-                                                <constraint firstItem="iF5-OE-svw" firstAttribute="leading" secondItem="bMd-1r-KMQ" secondAttribute="leading" id="ajN-an-8su"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="95U-NO-dqP" secondAttribute="trailing" id="cjB-lZ-jX6"/>
-                                                <constraint firstItem="95U-NO-dqP" firstAttribute="leading" secondItem="bMd-1r-KMQ" secondAttribute="leadingMargin" id="da4-Df-MTO"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="95U-NO-dqP" secondAttribute="bottom" id="gOV-84-nWm"/>
+                                                <constraint firstItem="iF5-OE-svw" firstAttribute="top" secondItem="bMd-1r-KMQ" secondAttribute="top" id="N1e-nS-XQz"/>
+                                                <constraint firstItem="95U-NO-dqP" firstAttribute="leading" secondItem="bMd-1r-KMQ" secondAttribute="leadingMargin" id="QVX-WU-oKH"/>
+                                                <constraint firstAttribute="bottom" secondItem="iF5-OE-svw" secondAttribute="bottom" id="c6X-7z-UAu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="95U-NO-dqP" secondAttribute="bottom" id="gqn-i7-SBC"/>
+                                                <constraint firstAttribute="trailing" secondItem="iF5-OE-svw" secondAttribute="trailing" id="rXR-80-iAN"/>
+                                                <constraint firstItem="95U-NO-dqP" firstAttribute="top" secondItem="bMd-1r-KMQ" secondAttribute="topMargin" id="rln-aj-r3J"/>
+                                                <constraint firstItem="iF5-OE-svw" firstAttribute="leading" secondItem="95U-NO-dqP" secondAttribute="trailing" constant="10" id="tZg-0V-Iea"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="descriprionLabel" destination="95U-NO-dqP" id="zPH-jA-sKg"/>
                                             <outlet property="nameLabel" destination="iF5-OE-svw" id="6Aj-k8-lcC"/>
+                                            <outlet property="ratingLabel" destination="95U-NO-dqP" id="zPH-jA-sKg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -65,7 +99,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AFj-Km-dMb" secondAttribute="bottom" id="wL2-vU-RZf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="F59-Te-40p"/>
+                    <tabBarItem key="tabBarItem" title="GAMES" image="gamecontroller.fill" catalog="system" id="F59-Te-40p">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="AFj-Km-dMb" id="5lQ-IZ-WXq"/>
                     </connections>
@@ -79,9 +115,11 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vJe-cg-X3w" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J6y-N6-ims">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="J6y-N6-ims">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="LP5-iU-rdG"/>
@@ -93,8 +131,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gamecontroller.fill" catalog="system" width="128" height="80"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

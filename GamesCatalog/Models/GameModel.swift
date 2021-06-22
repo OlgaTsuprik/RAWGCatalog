@@ -8,29 +8,37 @@
 import Foundation
 
 // MARK: - Welcome
-struct Welcome: Codable {
+struct ListOfGames: Codable {
     let count: Int
-    let next, previous: String
-    let results: [Result]
+    let next: String
+    let previous: String?
+    let results: [Game]
 }
 
 // MARK: - Result
-struct Result: Codable {
+struct Game: Codable {
     let id: Int
-    let slug, name, released: String
+    let slug: String
+    let name: String
+    let released: String
     let tba: Bool
     let backgroundImage: String
-    let rating, ratingTop: Int
-    let ratingsCount: Int
-    let reviewsTextCount: String
+    let rating: Double
+    let ratingTop: Int
+    //let ratingsCount: Int
+    //let reviewsTextCount: String
 
     enum CodingKeys: String, CodingKey {
-        case id, slug, name, released, tba
+        case id
+        case slug
+        case name
+        case released
+        case tba
         case backgroundImage = "background_image"
         case rating
         case ratingTop = "rating_top"
-        case ratingsCount = "ratings_count"
-        case reviewsTextCount = "reviews_text_count"
+        //case ratingsCount = "ratings_count"
+        //case reviewsTextCount = "reviews_text_count"
     }
 }
 

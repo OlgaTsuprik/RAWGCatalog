@@ -11,6 +11,11 @@ class GameCell: UITableViewCell {
     // MARK: IBOutlets
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var descriprionLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
     
+    func set(name: String, description: Double) {
+        self.nameLabel.text = name
+        self.ratingLabel.text = String(description)
+    }
+
 }
