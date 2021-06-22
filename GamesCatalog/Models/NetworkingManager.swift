@@ -10,26 +10,30 @@ import Foundation
 
 class NetworkingManager {
     // MARK: Properties
-    let baseURL = "https://api.rawg.io/docs/#operation/games_list"
+    let baseURL = "https://api.rawg.io/api/games"
     
     // MARK: Methods
-    func fetchGames(completion: @escaping ([Result]?) -> Void) {
-        guard let urlString =  URL(string: baseURL) else {
+    func fetchGames(completion: @escaping (GamesList) -> Void) {
+        guard let urlString =  URL(string: baseURL + "?key=" + apiKey) else {
             return
         }
         print(urlString)
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: urlString) { data, response, error in
-            guard let response = response as? HTTPURLResponse, let data = data else {return}
-            print(data)
-            do {
-                let singleGames = try? JSONDecoder().decode([Result].self, from: data)
-                print(data.description)
-                completion(singleGames)
+            if let data = data {
+                let decoder = JSONDecoder()
+                do {
+                    let gamesData = try decoder.decode(Welcome.self, from: data)
+                    if let games = GamesList(data: gamesData) {
+                    completion(games)
+                    }
+                    print(gamesData)
+                }
+                catch let error as NSError {
+                    print(error)
+                }
             }
-            catch let error {
-                print(error.localizedDescription)
-            }
-        }.resume()
-   }
+        }
+        task.resume()
+    }
 }

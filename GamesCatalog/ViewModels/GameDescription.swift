@@ -7,16 +7,22 @@
 
 import Foundation
 
-struct GameDescription {
-    var descriprion: String
+
+struct GameDescription: Codable {
+    var name: String
+    var rating: Int
+    var slug: String
 }
 
 struct GamesList {
-    let gamesList: [GameDescription]
+    var count: Int
+    var gamesList: [GameDescription]
     
-    init(game: Welcome) {
-        gamesList = game.results.map {
-            return GameDescription(descriprion: $0.reviewsTextCount)
+    init?(data: Welcome) {
+        count = data.count
+        gamesList = data.results.map {
+            return GameDescription(name: $0.name, rating: $0.rating, slug: $0.slug)
         }
     }
 }
+

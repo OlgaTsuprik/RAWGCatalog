@@ -13,24 +13,27 @@ class ViewController: UIViewController {
     
     // MARK: Properties
     var networkingManager = NetworkingManager()
-    var games: [GameDescription]?
+    var games: [GameDescription] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        networkingManager.fetchGames { data in
-            //guard data != nil else { return }
-            self.games = data as? [GameDescription]
-            print(self.games?.first?.descriprion)
+        networkingManager.fetchGames { [weak self] data in
+            self?.games = data.gamesList
+            self?.tableView.reloadData()
         }
     }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        games?.count ?? 1
+        games.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
