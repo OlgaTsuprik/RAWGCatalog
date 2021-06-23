@@ -69,7 +69,6 @@
 				BE8365E626807F9C00D2B580 /* ViewModels */,
 				BE8365E1267CBF4800D2B580 /* Config */,
 				BE8365DC267C945400D2B580 /* View */,
-				BE8365DB267C936500D2B580 /* Extensions */,
 				BE8365DA267C934F00D2B580 /* Supporting Files */,
 				BE8365D9267C933300D2B580 /* Models */,
 				BE8365D7267C931900D2B580 /* ViewControllers */,
@@ -104,13 +103,6 @@
 				BE8365CC267C86FF00D2B580 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BE8365DB267C936500D2B580 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BE8365DC267C945400D2B580 /* View */ = {

@@ -25,8 +25,6 @@ struct Game: Codable {
     let backgroundImage: String
     let rating: Double
     let ratingTop: Int
-    //let ratingsCount: Int
-    //let reviewsTextCount: String
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -37,8 +35,6 @@ struct Game: Codable {
         case backgroundImage = "background_image"
         case rating
         case ratingTop = "rating_top"
-        //case ratingsCount = "ratings_count"
-        //case reviewsTextCount = "reviews_text_count"
     }
 }
 

@@ -11,13 +11,15 @@ import Foundation
 class NetworkingManager {
     // MARK: Properties
     let baseURL = "https://api.rawg.io/api/games"
+    var pageNumber: Int = 1
+    var isLoadingList: Bool = false
     
     // MARK: Methods
     func fetchGames(completion: @escaping (GamesList) -> Void) {
-        guard let urlString =  URL(string: baseURL + "?key=" + apiKey) else {
+        self.isLoadingList = false
+        guard let urlString =  URL(string: baseURL + "?key=" + apiKey + "&page=" + String(pageNumber)) else {
             return
         }
-        print(urlString)
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: urlString) { data, response, error in
             if let data = data {
@@ -25,7 +27,7 @@ class NetworkingManager {
                 do {
                     let gamesData = try decoder.decode(ListOfGames.self, from: data)
                     if let games = GamesList(data: gamesData) {
-                    completion(games)
+                        completion(games)
                     }
                 }
                 catch let error as NSError {
