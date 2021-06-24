@@ -17,7 +17,7 @@
 		BE8365E0267CBD4900D2B580 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8365DF267CBD4900D2B580 /* GameModel.swift */; };
 		BE8365E3267CBF6100D2B580 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8365E2267CBF6100D2B580 /* APIKey.swift */; };
 		BE8365E5267CC0F700D2B580 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8365E4267CC0F700D2B580 /* NetworkingManager.swift */; };
-		BE8365E82680819300D2B580 /* GameDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8365E72680819300D2B580 /* GameDescription.swift */; };
+		BE8365E82680819300D2B580 /* vmGameDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8365E72680819300D2B580 /* vmGameDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		BE8365DF267CBD4900D2B580 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		BE8365E2267CBF6100D2B580 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		BE8365E4267CC0F700D2B580 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
-		BE8365E72680819300D2B580 /* GameDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDescription.swift; sourceTree = "<group>"; };
+		BE8365E72680819300D2B580 /* vmGameDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vmGameDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +47,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77AD6E5A26836FA800ACE034 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE8365C9267C86FD00D2B580 /* Main.storyboard */,
+				BE8365DD267C94B900D2B580 /* CustomCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		77AD6E5B26836FB400ACE034 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE8365C7267C86FD00D2B580 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		BE8365B7267C86FD00D2B580 = {
 			isa = PBXGroup;
 			children = (
@@ -71,18 +88,9 @@
 				BE8365DC267C945400D2B580 /* View */,
 				BE8365DA267C934F00D2B580 /* Supporting Files */,
 				BE8365D9267C933300D2B580 /* Models */,
-				BE8365D7267C931900D2B580 /* ViewControllers */,
 				BE8365D1267C86FF00D2B580 /* Info.plist */,
 			);
 			path = GamesCatalog;
-			sourceTree = "<group>";
-		};
-		BE8365D7267C931900D2B580 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				BE8365C7267C86FD00D2B580 /* ViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		BE8365D9267C933300D2B580 /* Models */ = {
@@ -108,8 +116,8 @@
 		BE8365DC267C945400D2B580 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BE8365C9267C86FD00D2B580 /* Main.storyboard */,
-				BE8365DD267C94B900D2B580 /* CustomCell.swift */,
+				77AD6E5B26836FB400ACE034 /* ViewControllers */,
+				77AD6E5A26836FA800ACE034 /* Views */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,7 +133,7 @@
 		BE8365E626807F9C00D2B580 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				BE8365E72680819300D2B580 /* GameDescription.swift */,
+				BE8365E72680819300D2B580 /* vmGameDescription.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -205,7 +213,7 @@
 				BE8365C4267C86FD00D2B580 /* AppDelegate.swift in Sources */,
 				BE8365DE267C94B900D2B580 /* CustomCell.swift in Sources */,
 				BE8365E3267CBF6100D2B580 /* APIKey.swift in Sources */,
-				BE8365E82680819300D2B580 /* GameDescription.swift in Sources */,
+				BE8365E82680819300D2B580 /* vmGameDescription.swift in Sources */,
 				BE8365C6267C86FD00D2B580 /* SceneDelegate.swift in Sources */,
 				BE8365E5267CC0F700D2B580 /* NetworkingManager.swift in Sources */,
 			);

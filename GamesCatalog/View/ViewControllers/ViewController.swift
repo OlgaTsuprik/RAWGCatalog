@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     // MARK: Properties
     var networkingManager = NetworkingManager()
-    var games: [GameDescription] = []
+    var games: [vmGameDescription] = []
     var isLoadingList: Bool = false
     
     // MARK: Life cycle
@@ -53,7 +53,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, UIScrollVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath)
         if let cell = cell as? GameCell {
             let game = games[indexPath.row]
-            cell.set(index: (indexPath.row + 1), name: game.name, rating: game.rating)
+            cell.mvvmViewModel = game
+            cell.indexLabel.text = String(indexPath.row + 1)
         }
         cell.selectionStyle = .none
         return cell

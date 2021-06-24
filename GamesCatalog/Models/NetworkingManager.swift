@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class NetworkingManager {
     // MARK: Properties
     let baseURL = "https://api.rawg.io/api/games"
