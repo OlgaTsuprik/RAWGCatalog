@@ -50,38 +50,6 @@
             endingLineNumber = "22"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "AB917B5E-1959-4BC2-957A-63D10A60E875 - fb372f25e7ac8564"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GamesCatalog.ViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "GamesCatalog"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tsuprikolga/Documents/Docs/GamesCatalog/GamesCatalog/ViewControllers/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "560">
-               </Location>
-               <Location
-                  uuid = "AB917B5E-1959-4BC2-957A-63D10A60E875 - 199b55c993db9de4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;GamesCatalog.Result&gt;&gt;) -&gt; () in GamesCatalog.ViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "GamesCatalog"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tsuprikolga/Documents/Docs/GamesCatalog/GamesCatalog/ViewControllers/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
