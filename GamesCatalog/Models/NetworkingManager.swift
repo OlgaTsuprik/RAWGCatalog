@@ -16,7 +16,7 @@ class NetworkingManager {
     // MARK: Methods
     func fetchGames(completion: @escaping (GamesList) -> Void) {
         self.isLoadingList = false
-        guard let urlString =  URL(string: baseURL + "?key=" + apiKey + "&page=" + String(pageNumber)) else {
+        guard let urlString =  URL(string: baseURL + "?key=" + Constants.apiKey.rawValue + "&page=" + String(pageNumber)) else {
             return
         }
         let session = URLSession(configuration: .default)
